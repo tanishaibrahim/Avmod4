@@ -1,41 +1,48 @@
-# Project Title
+# Avalanche module 4 - Creating and deploying Degen Token
 
-Simple overview of use/purpose.
+In our project, a token called Degen has been created using ERC20 standard and deployed to avalanche fuji testnet. 
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The Degen token that we created can be minted, burnt, approved, redeemed and transferred . There's also a Degen store which has 3 items which can be redeemed. This smart contract that we created is deployed to the Avalanche Fuji Testnet and has also been verified.
 
 ## Getting Started
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+You can download the code as ZIP folder under code above.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+Run the following commands to deploy and verify the contract:
 ```
-code blocks for commands
+npx hardhat test
+```
+
+```
+npx hardhat run scripts/deploy.js --network fuji
+```
+
+```
+npx hardhat verify {contract address} --network fuji
 ```
 
 ## Help
 
-Any advise for common problems or issues.
+You will need to create a .env file in your project directory and add the following code along with the repective values:
+
 ```
-command to run if program contains helper info
+WALLET_PRIVATE_KEY=
+SNOWTRACE_API_KEY=
 ```
 
 ## Authors
 
-Contributors names and contact info
+Tanisha Ibrahim
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+@tanishaassii@gmail.com
 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
